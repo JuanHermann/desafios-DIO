@@ -27,6 +27,7 @@
  * instância do jogo ou o número 0 se o jogo for impossível.
  */
 
+import java.awt.image.ReplicateScaleFilter;
 import java.util.*;
 
 public class Main {
@@ -102,63 +103,85 @@ public class Main {
 
     public static void main(String[] args) {
 
-        boolean juan = true;
+//        1 - projeto do Lucas
+//        2 - projeto do Juan
+//        3 - gerador de casos de teste
+        int opcao = 3;
 
-        if (juan) {
 
-            Scanner leitor = new Scanner(System.in);
+        switch (opcao) {
+            case 2:
+                Scanner leitor = new Scanner(System.in);
 
-            String linha;
-            int qtdeCaso = 0, caso = 0;
+                String linha;
+                int qtdeCaso = 0, caso = 0;
 
-            while (leitor.hasNext()) {
-                if (caso == 0) {
-                    caso = Integer.parseInt(leitor.nextLine());
-                    if (caso == 0)
-                        break;
+                while (leitor.hasNext()) {
+                    if (caso == 0) {
+                        caso = Integer.parseInt(leitor.nextLine());
+                        if (caso == 0)
+                            break;
 
-                } else {
-                    linha = leitor.nextLine();
-                    pilha[0][qtdeCaso] = Integer.parseInt(linha.split(" ")[0]);
-                    pilha[1][qtdeCaso] = Integer.parseInt(linha.split(" ")[1]);
-                    pilha[2][qtdeCaso] = Integer.parseInt(linha.split(" ")[2]);
+                    } else {
+                        linha = leitor.nextLine();
+                        pilha[0][qtdeCaso] = Integer.parseInt(linha.split(" ")[0]);
+                        pilha[1][qtdeCaso] = Integer.parseInt(linha.split(" ")[1]);
+                        pilha[2][qtdeCaso] = Integer.parseInt(linha.split(" ")[2]);
 
-                    qtdeCaso++;
+                        qtdeCaso++;
 
-                    if (qtdeCaso == caso) {
-                        n = qtdeCaso;
-                        System.out.println(ganhou(0, 0, 0) ? "1" : "0");
-                        pilha = new int[3][102];
-                        caso = 0;
-                        qtdeCaso = 0;
-                        m.clear();
+                        if (qtdeCaso == caso) {
+                            n = qtdeCaso;
+                            System.out.println(ganhou(0, 0, 0) ? "1" : "0");
+                            pilha = new int[3][102];
+                            caso = 0;
+                            qtdeCaso = 0;
+                            m.clear();
+                        }
+
+                    }
+                }
+                break;
+            case 1:
+
+                Scanner in = new Scanner(System.in);
+
+                while (true) {
+
+                    n = Integer.parseInt(in.nextLine());
+
+                    if (n == 0) break;
+
+                    for (int i = 0; i < n; i++) {
+
+                        StringTokenizer st = new StringTokenizer(in.nextLine());
+                        pilha[0][i] = Integer.parseInt(st.nextToken());
+                        pilha[1][i] = Integer.parseInt(st.nextToken());
+                        pilha[2][i] = Integer.parseInt(st.nextToken());
+
                     }
 
+                    if (cartas(0, 0, 0) == true) System.out.println("1");
+                    else System.out.println("0");
+                    m.clear();
                 }
-            }
-
-        } else {
-            Scanner in = new Scanner(System.in);
-
-            while (true) {
-
-                n = Integer.parseInt(in.nextLine());
-
-                if (n == 0) break;
-
-                for (int i = 0; i < n; i++) {
-
-                    StringTokenizer st = new StringTokenizer(in.nextLine());
-                    pilha[0][i] = Integer.parseInt(st.nextToken());
-                    pilha[1][i] = Integer.parseInt(st.nextToken());
-                    pilha[2][i] = Integer.parseInt(st.nextToken());
-
+                break;
+            case 3:
+                Random r = new Random();
+                for (int i = 0; i < 10; i++) {
+                    int numDado = r.nextInt(101) + 1;
+                    System.out.println(numDado);
+                    for (int x = 0; x < numDado; x++) {
+                        System.out.print(r.nextInt(10));
+                        System.out.print(" ");
+                        System.out.print(r.nextInt(10));
+                        System.out.print(" ");
+                        System.out.print(r.nextInt(10));
+                        System.out.println("");
+                    }
                 }
-
-                if (cartas(0, 0, 0) == true) System.out.println("1");
-                else System.out.println("0");
-                m.clear();
-            }
+                System.out.println(0);
+                break;
 
         }
     }
