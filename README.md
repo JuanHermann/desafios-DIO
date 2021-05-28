@@ -30,35 +30,35 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
                 <td>Ordenando Números Pares e Ímpares</td>
                 <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/1.%20Ordenando%20N%C3%BAmeros%20Pares%20e%20%C3%8Dmpares/OrderingEvenNumbers.java">Código</a></td>
                 <td align="center">✔️</td>
-                <td align="center"></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">2</td>
                 <td>Compras no Supermercado</td>
                 <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/2.%20Compras%20no%20Supermercado/SupermarketShopping.java">Código</a></td>
                 <td align="center">✔️</td>
-                <td align="center"></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">3</td>
                 <td>Uniformes de Final de Ano</td>
                 <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/3.%20Uniformes%20de%20Final%20de%20Ano/YearEndUniform.java">Código</a></td>
                 <td align="center">✔️</td>
-                <td align="center"></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">4</td>
                 <td>Fila do Banco</td>
                 <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/4.%20Fila%20do%20Banco/BankQueue.java">Código</a></td>
                 <td align="center">✔️</td>
-                <td align="center"></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">5</td>
                 <td>Gincana no Acampamento</td>
                 <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/5.%20Gincana%20no%20Acampamento/GymkhanaInTheCamp.java">Código</a></td>
                 <td align="center">✔️</td>
-                <td align="center"></td>
+                <td align="center">✔️</td>
             </tr>
         </table>
         <!-- Resolvendo Algoritmos com Java -->
