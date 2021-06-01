@@ -13,10 +13,10 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
         <!-- Ordenação e Filtros em Java -->
         <table border=1>
             <tr>
-                <th colspan="4">Ordenação e Filtros em Java</th>
+                <th colspan="5">Ordenação e Filtros em Java</th>
             </tr>
             <tr>
-                <th colspan="4"></th>
+                <th colspan="5"></th>
             </tr>
             <tr>
                 <th>Etapa</th>
@@ -64,10 +64,10 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
         <!-- Resolvendo Algoritmos com Java -->
         <table border=1>
             <tr>
-                <th colspan="4">Resolvendo Algoritmos com Java</th>
+                <th colspan="5">Resolvendo Algoritmos com Java</th>
             </tr>
             <tr>
-                <th colspan="4"></th>
+                <th colspan="5"></th>
             </tr>
             <tr>
                 <th>Etapa</th>
@@ -88,21 +88,21 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
                 <td>Abreviando Posts do Blog</td>
                 <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/2.%20Resolvendo%20Algoritmos%20com%20Java/2.%20Abreviando%20Posts%20do%20Blog/Main.java">Código</a></td>
                 <td align="center">✔️</td>
-                <td align="center"></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">3</td>
                 <td>Combinação de Strings</td>
                 <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/2.%20Resolvendo%20Algoritmos%20com%20Java/3.%20Combina%C3%A7%C3%A3o%20de%20Strings/Main.java">Código</a></td>
                 <td align="center">✔️</td>
-                <td align="center"></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">4</td>
                 <td>Hash Mágico</td>
                 <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/2.%20Resolvendo%20Algoritmos%20com%20Java/4.%20Hash%20M%C3%A1gico/Main.java">Código</a></td>
                 <td align="center">✔️</td>
-                <td align="center"></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">5</td>
@@ -115,10 +115,10 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
         <!-- Solução de Problemas Básicos em Java -->
         <table border=1>
             <tr>
-                <th colspan="4">Solução de Problemas Básicos em Java</th>
+                <th colspan="5">Solução de Problemas Básicos em Java</th>
             </tr>
             <tr>
-                <th colspan="4"></th>
+                <th colspan="5"></th>
             </tr>
             <tr>
                 <th>Etapa</th>
