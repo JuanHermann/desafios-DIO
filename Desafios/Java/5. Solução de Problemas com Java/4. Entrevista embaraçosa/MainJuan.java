@@ -1,33 +1,52 @@
 /*
 Desafio
-Todo final de ano ocorre uma festa na escola. As inscrições para participar da festa são abertas no início de julho.
- No momento da inscrição, o aluno pode escolher se quer ser "O Amigo do Pablo" na festa ou não. O mais lógico seria
- escolher a opção Sim, afinal, é um privilégio ser O Amigo do Pablo, já que ele é a pessoa mais descolada da escola.
- Porém, há indivíduos que definitivamente não pretendem ser O Amigo do Pablo, e por motivos desconhecidos.
+A nutricionista Juliana Alcantra é uma excelente profissional de sua área. Em determinado dia,
+ela foi entrevistada ao vivo para um jornal da cidade. No entanto, ficou um pouco nervosa na hora,
+e diante da situação, sua fala ficou um pouco distorcida, repetindo o final de cada palavra após dizer a mesma.
+Para que isso não aconteça novamente, ela precisa da sua ajuda para escrever um programa que omita a parte repetida,
+de modo que as palavras sejam pronunciadas como deveriam ser.
 
-Somente um será o escolhido. Em vista disso, muitos alunos que escolheram a opção Sim realizaram a inscrição
-diversas vezes para aumentar a própria probabilidade de ser O Amigo do Pablo. A diretora da escola pediu que
-você desenvolva um programa que organize as inscrições do site, pois está havendo um spam de inscrições. O critério
-para ser o escolhido é a quantidade de letras do primeiro nome, e em caso de empate, vence aquele que realizou
-primeiro a inscrição. A organização final dos inscritos deverá seguir a ordem de escolha (Sim ou Não),
-mas respeitando a ordem alfabética.
-
-OBS.: Ninguém que escolheu a opção Não realizou a inscrição mais de uma vez.
+Escreva um programa que, dada uma palavra errada, a mesma seja corrigida.
 
 Entrada
-A entrada contém somente um caso de teste. Cada linha é composta pelo primeiro nome do participante (sem espaços),
-seguido da opção SIM (caso o usuário queira ser O Amigo do Pablo) ou NAO (caso não queira).
-A entrada termina assim que o usuário digita "FIM" (sem as aspas).
+Haverá diversos casos de teste. Cada caso de teste é formado por uma palavra, de, no máximo, 30 caracteres,
+dita da forma errada. A entrada termina com fim de arquivo.
 
 Saída
-Seu programa deverá imprimir os inscritos pela ordem de escolha e por ordem alfabética, seguido do nome do vencedor.
-Imprima uma linha em branco entre a lista de inscritos e o nome do vencedor.
+Para cada caso de teste, escreva a palavra devidamente corrigida. Analise os exemplos para verificar o padrão,
+de modo a consertar todos os casos.
  */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class MainJuan {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        String palavraErrada;
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("juan");
+        while ((palavraErrada = in.readLine()) != null) {
+
+            int metade = palavraErrada.length() / 2;
+            int limite = metade;
+            if (palavraErrada.length() % 2 == 1) {
+                metade++;
+            }
+            boolean encontrou = false;
+            for (int i = 0; i < limite; i++) {
+
+                String substring = palavraErrada.substring(0, metade + i);
+                if (substring.endsWith(palavraErrada.substring(metade + i, palavraErrada.length()))) {
+                    System.out.println(substring);
+                    encontrou = true;
+                }
+
+            }
+            if (!encontrou) {
+                System.out.println(palavraErrada);
+            }
+        }
     }
 }
