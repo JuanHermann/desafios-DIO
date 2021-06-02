@@ -52,105 +52,52 @@ public class BankQueue {
 
     public static void main(String[] args) throws IOException {
 
-//        1 - Projeto Lucas
-//        2 - Projeto Juan
-        int opcao = 2;
-        switch (opcao) {
-            case 1:
-                Scanner scanner = new Scanner(System.in);
-                int N = scanner.nextInt();
-                scanner.nextLine();
-                int peopleOnQueue;
-                ArrayList<Integer> currentQueue = new ArrayList<>();
-                HashMap<Integer, Integer> numToIndexOriginal = new HashMap<>();
-                int currentSmsNumber;
-                int numSwitches;
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        scanner.nextLine();
+        int peopleOnQueue;
+        ArrayList<Integer> currentQueue = new ArrayList<>();
+        HashMap<Integer, Integer> numToIndexOriginal = new HashMap<>();
+        int currentSmsNumber;
+        int numSwitches;
 
-                for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
 
-                    peopleOnQueue = scanner.nextInt();
-                    numSwitches = 0;
+            peopleOnQueue = scanner.nextInt();
+            numSwitches = 0;
 
-                    for (int j = 0; j < peopleOnQueue; j++) {
+            for (int j = 0; j < peopleOnQueue; j++) {
 
-                        currentSmsNumber = scanner.nextInt();
-                        currentQueue.add(currentSmsNumber);
-                        numToIndexOriginal.put(currentSmsNumber, currentQueue.size() - 1);
+                currentSmsNumber = scanner.nextInt();
+                currentQueue.add(currentSmsNumber);
+                numToIndexOriginal.put(currentSmsNumber, currentQueue.size() - 1);
 
-                    }
+            }
 
 
-                    SmsNumberComparator comparator = new SmsNumberComparator();
-                    Collections.sort(currentQueue, comparator);
+            SmsNumberComparator comparator = new SmsNumberComparator();
+            Collections.sort(currentQueue, comparator);
 
 
-                    for (int j = 0; j < currentQueue.size(); j++) {
+            for (int j = 0; j < currentQueue.size(); j++) {
 
-                        int originalIndex = numToIndexOriginal.get(currentQueue.get(j));
+                int originalIndex = numToIndexOriginal.get(currentQueue.get(j));
 
 
-                        if (originalIndex != j) {
+                if (originalIndex != j) {
 
-                            numSwitches++;
-
-                        }
-
-                    }
-
-                    System.out.println(peopleOnQueue - numSwitches);
-                    currentQueue = new ArrayList<>();
+                    numSwitches++;
 
                 }
 
-                scanner.close();
-                break;
-            case 2:
-                Scanner leitor = new Scanner(System.in);
+            }
 
-                List<Integer> numeros = new ArrayList();
-                List<Integer> numerosAux = new ArrayList();
-                int qtdeCaso = 0, diferenca = 0, caso = 0, fila = 0;
+            System.out.println(peopleOnQueue - numSwitches);
+            currentQueue = new ArrayList<>();
 
-                while (leitor.hasNext()) {
-                    if (caso == 0) {
-                        caso = leitor.nextInt();
-                    } else {
-
-                        if (fila == 0) {
-                            fila = leitor.nextInt();
-                        } else {
-                            numeros.add(leitor.nextInt());
-                            if (numeros.size() == fila) {
-
-                                //numeros.stream().forEach(System.out::print);
-                                numerosAux = numeros.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-
-                                for (int i = 0; i < numeros.size(); i++) {
-                                    if (numeros.get(i) == numerosAux.get(i)) {
-                                        diferenca++;
-                                    }
-                                }
-
-                                System.out.println(diferenca);
-
-                                diferenca = 0;
-                                numeros = new ArrayList<>();
-                                qtdeCaso++;
-                                fila = 0;
-
-                                if (qtdeCaso == caso)
-                                    break;
-                            }
-
-                        }
-
-
-                    }
-
-                }
-                break;
         }
 
+        scanner.close();
 
     }
 

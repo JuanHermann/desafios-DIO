@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MainJuan {
+public class BarrasDeOuroJuan {
 
     static int capacidadeCarroagem;
 

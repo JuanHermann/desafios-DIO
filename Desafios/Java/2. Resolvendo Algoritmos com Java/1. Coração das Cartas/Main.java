@@ -103,46 +103,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        1 - projeto do Lucas
-//        2 - projeto do Juan
-//        3 - gerador de casos de teste
-        int opcao = 3;
-
-
-        switch (opcao) {
-            case 2:
-                Scanner leitor = new Scanner(System.in);
-
-                String linha;
-                int qtdeCaso = 0, caso = 0;
-
-                while (leitor.hasNext()) {
-                    if (caso == 0) {
-                        caso = Integer.parseInt(leitor.nextLine());
-                        if (caso == 0)
-                            break;
-
-                    } else {
-                        linha = leitor.nextLine();
-                        pilha[0][qtdeCaso] = Integer.parseInt(linha.split(" ")[0]);
-                        pilha[1][qtdeCaso] = Integer.parseInt(linha.split(" ")[1]);
-                        pilha[2][qtdeCaso] = Integer.parseInt(linha.split(" ")[2]);
-
-                        qtdeCaso++;
-
-                        if (qtdeCaso == caso) {
-                            n = qtdeCaso;
-                            System.out.println(ganhou(0, 0, 0) ? "1" : "0");
-                            pilha = new int[3][102];
-                            caso = 0;
-                            qtdeCaso = 0;
-                            m.clear();
-                        }
-
-                    }
-                }
-                break;
-            case 1:
 
                 Scanner in = new Scanner(System.in);
 
@@ -165,73 +125,6 @@ public class Main {
                     else System.out.println("0");
                     m.clear();
                 }
-                break;
-            case 3:
-                Random r = new Random();
-                for (int i = 0; i < 10; i++) {
-                    int numDado = r.nextInt(101) + 1;
-                    System.out.println(numDado);
-                    for (int x = 0; x < numDado; x++) {
-                        System.out.print(r.nextInt(10));
-                        System.out.print(" ");
-                        System.out.print(r.nextInt(10));
-                        System.out.print(" ");
-                        System.out.print(r.nextInt(10));
-                        System.out.println("");
-                    }
-                }
-                System.out.println(0);
-                break;
-
-        }
-    }
-
-    private static boolean ganhou(int pA, int pB, int pC) {
-
-        boolean aPassou = pA == n;
-        boolean bPassou = pB == n;
-        boolean cPassou = pC == n;
-
-        if (aPassou && bPassou && cPassou) {
-            return true;
-        } else {
-
-            int a = pilha[0][pA];
-            int b = pilha[1][pB];
-            int c = pilha[2][pC];
-
-            String ss = "" + pA + pB + pC;
-
-            int x = m.getOrDefault(ss, 0);
-
-            if (x > 0) return (x == 1);
-
-            if (!aPassou && !bPassou && !cPassou && ((a + b + c) % 3 == 0) && ganhou(pA + 1, pB + 1, pC + 1)) {
-                m.putIfAbsent(ss, 1);
-                return true;
-            } else if (!aPassou && !bPassou && ((a + b) % 3 == 0) && ganhou(pA + 1, pB + 1, pC)) {
-                m.putIfAbsent(ss, 1);
-                return true;
-            } else if (!aPassou && !cPassou && ((a + c) % 3 == 0) && ganhou(pA + 1, pB, pC + 1)) {
-                m.putIfAbsent(ss, 1);
-                return true;
-            } else if (!bPassou && !cPassou && ((b + c) % 3 == 0) && ganhou(pA, pB + 1, pC + 1)) {
-                m.putIfAbsent(ss, 1);
-                return true;
-            } else if (!aPassou && (a % 3 == 0) && ganhou(pA + 1, pB, pC)) {
-                m.putIfAbsent(ss, 1);
-                return true;
-            } else if (!bPassou && (b % 3 == 0) && ganhou(pA, pB + 1, pC)) {
-                m.putIfAbsent(ss, 1);
-                return true;
-            } else if (!cPassou && (c % 3 == 0) && ganhou(pA, pB, pC + 1)) {
-                m.putIfAbsent(ss, 1);
-                return true;
-            }
-
-            m.putIfAbsent(ss, 2);
-            return false;
-        }
 
 
     }

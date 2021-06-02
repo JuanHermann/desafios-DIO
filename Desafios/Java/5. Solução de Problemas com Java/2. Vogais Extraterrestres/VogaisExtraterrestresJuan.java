@@ -23,7 +23,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainJuan {
+public class VogaisExtraterrestresJuan {
 
     public static void main(String[] args) throws IOException {
 

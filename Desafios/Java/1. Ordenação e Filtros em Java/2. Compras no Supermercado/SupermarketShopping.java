@@ -27,137 +27,95 @@
  * sem os itens repetidos e em ordem alfabética.
  */
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.stream.Collectors;
 
 public class SupermarketShopping {
 
     public static void main(String[] args) throws IOException {
 
-//        1 - Projeto Lucas
-//        2 - Projeto Juan
-        int opcao = 2;
-        switch (opcao) {
-            case 1:
-                Scanner scr = new Scanner(System.in);
-                String produtos;
+        Scanner scr = new Scanner(System.in);
+        String produtos;
 
-                List<List<String>> listaProdutos = new ArrayList<>() {
+        List<List<String>> listaProdutos = new ArrayList<>() {
 
-                    private static final long serialVersionUID = 1L;
+            private static final long serialVersionUID = 1L;
 
-                    @Override
-                    public String toString() {
+            @Override
+            public String toString() {
 
-                        StringBuilder stb = new StringBuilder();
+                StringBuilder stb = new StringBuilder();
 
-                        for (int i = 0; i < this.size(); i++) {
+                for (int i = 0; i < this.size(); i++) {
 
-                            stb.append(this.get(i) + " ");
-
-                        }
-
-                        return stb.toString();
-
-                    }
-
-                };
-
-                Set<String> set = new TreeSet<>();
-
-                int N = scr.nextInt();
-
-                scr.nextLine();
-
-                for (int i = 0; i < N; i++) {
-
-                    produtos = scr.nextLine();
-                    String[] produto = produtos.split(" ");
-
-                    for (int j = 0; j < produto.length; j++) {
-
-                        set.add(produto[j].toLowerCase());
-
-                    }
-
-                    List<String> listaP = new ArrayList<>() {
-
-                        private static final long serialVersionUID = 1L;
-
-                        @Override
-                        public String toString() {
-
-                            StringBuilder stb = new StringBuilder();
-
-                            for (int i = 0; i < this.size(); i++) {
-
-                                stb.append(this.get(i) + " ");
-
-                            }
-
-                            return stb.toString();
-
-                        }
-
-                    };
-
-                    Iterator<String> iterator = set.iterator();
-
-                    while (iterator.hasNext()) {
-
-                        listaP.add(iterator.next());
-
-                    }
-
-                    listaProdutos.add(listaP);
-                    set.clear();
+                    stb.append(this.get(i) + " ");
 
                 }
 
-                listaProdutos.forEach(System.out::println);
-                scr.close();
-                break;
-            case 2:
-                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                return stb.toString();
 
-                List<String> compras = new ArrayList<>();
+            }
 
-                String ant = "";
+        };
 
-                int qtde = 0;
-                int qtdetotal = Integer.parseInt(br.readLine());
-                String linhaAtual = "";
+        Set<String> set = new TreeSet<>();
 
-                while (!(linhaAtual = br.readLine()).equals("")) {
-                    qtde++;
-                    for (String a : linhaAtual.split(" ")) {
-                        compras.add(a);
+        int N = scr.nextInt();
+
+        scr.nextLine();
+
+        for (int i = 0; i < N; i++) {
+
+            produtos = scr.nextLine();
+            String[] produto = produtos.split(" ");
+
+            for (int j = 0; j < produto.length; j++) {
+
+                set.add(produto[j].toLowerCase());
+
+            }
+
+            List<String> listaP = new ArrayList<>() {
+
+                private static final long serialVersionUID = 1L;
+
+                @Override
+                public String toString() {
+
+                    StringBuilder stb = new StringBuilder();
+
+                    for (int i = 0; i < this.size(); i++) {
+
+                        stb.append(this.get(i) + " ");
+
                     }
-                    //compras.stream().sorted();
 
-                    ant = "";
-                    for (String b : compras.stream().sorted().collect(Collectors.toList())) {
-                        if (!b.equals(ant)) {
-                            System.out.print(b + " ");
-                            ant = b;
-                        }
-                    }
+                    return stb.toString();
 
-                    System.out.println("");
-                    compras = new ArrayList<>();
-                    if (qtde == qtdetotal)
-                        break;
                 }
-                break;
+
+            };
+
+            Iterator<String> iterator = set.iterator();
+
+            while (iterator.hasNext()) {
+
+                listaP.add(iterator.next());
+
+            }
+
+            listaProdutos.add(listaP);
+            set.clear();
+
         }
+
+        listaProdutos.forEach(System.out::println);
+        scr.close();
 
 
     }

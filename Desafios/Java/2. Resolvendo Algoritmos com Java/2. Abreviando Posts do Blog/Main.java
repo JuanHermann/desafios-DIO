@@ -52,210 +52,123 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-//        1 - Projeto Lucas
-//        2 - Projeto Juan
-        int opcao = 2;
-        switch (opcao) {
-            case 1:
+
+        List<String> alfabeto = new ArrayList(Arrays.asList("abcdefghijklmnopqrstuvwxyz".split("")));
+        List<String> entradas = new ArrayList<String>();
+        Scanner sc = new Scanner(System.in, "ISO-8859-1");
+
+        while (true) {
+
+            String frase = sc.nextLine()
+                    .trim()
+                    .toLowerCase()
+                    .replaceAll("\n", " ")
+                    .replaceAll("\t", " ");
+
+            if (frase.equals(".")) break;
+            if (frase.length() <= 0) continue;
+
+            List<String> vetPalavrasFrase = new ArrayList(Arrays.asList(frase.split(" ")));
+            Map<String, String> dicionario = new HashMap<String, String>();
+
+            alfabeto.stream().forEach(letra -> {
+
+                dicionario.put(letra, "");
+
+            });
+
+            Map<String, Map<String, Integer>> repeticaoPalavra = new HashMap<String, Map<String, Integer>>();
+
+            alfabeto.stream().forEach(letra -> {
+
+                repeticaoPalavra.put(letra, new HashMap<String, Integer>());
+
+            });
+
+            vetPalavrasFrase.stream().forEach(palavra -> {
+
+                repeticaoPalavra.get(palavra.substring(0, 1)).put(palavra, 0);
+
+            });
+
+            vetPalavrasFrase.stream().forEach(palavra -> {
+
+                int qt = repeticaoPalavra.get(palavra.substring(0, 1)).get(palavra);
+                qt++;
+                repeticaoPalavra.get(palavra.substring(0, 1)).put(palavra, qt);
+
+            });
 
 
-                List<String> alfabeto = new ArrayList(Arrays.asList("abcdefghijklmnopqrstuvwxyz".split("")));
-                List<String> entradas = new ArrayList<String>();
-                Scanner sc = new Scanner(System.in, "ISO-8859-1");
+            alfabeto.stream().forEach(letra -> {
 
-                while (true) {
+                Map<String, Integer> map = repeticaoPalavra.get(letra);
+                List<String> chaves = new ArrayList<String>(map.keySet());
 
-                    String frase = sc.nextLine()
-                            .trim()
-                            .toLowerCase()
-                            .replaceAll("\n", " ")
-                            .replaceAll("\t", " ");
+                int qtTotalCharPorLetra = 0;
 
-                    if (frase.equals(".")) break;
-                    if (frase.length() <= 0) continue;
+                for (String chave : chaves) {
 
-                    List<String> vetPalavrasFrase = new ArrayList(Arrays.asList(frase.split(" ")));
-                    Map<String, String> dicionario = new HashMap<String, String>();
-
-                    alfabeto.stream().forEach(letra -> {
-
-                        dicionario.put(letra, "");
-
-                    });
-
-                    Map<String, Map<String, Integer>> repeticaoPalavra = new HashMap<String, Map<String, Integer>>();
-
-                    alfabeto.stream().forEach(letra -> {
-
-                        repeticaoPalavra.put(letra, new HashMap<String, Integer>());
-
-                    });
-
-                    vetPalavrasFrase.stream().forEach(palavra -> {
-
-                        repeticaoPalavra.get(palavra.substring(0, 1)).put(palavra, 0);
-
-                    });
-
-                    vetPalavrasFrase.stream().forEach(palavra -> {
-
-                        int qt = repeticaoPalavra.get(palavra.substring(0, 1)).get(palavra);
-                        qt++;
-                        repeticaoPalavra.get(palavra.substring(0, 1)).put(palavra, qt);
-
-                    });
-
-
-                    alfabeto.stream().forEach(letra -> {
-
-                        Map<String, Integer> map = repeticaoPalavra.get(letra);
-                        List<String> chaves = new ArrayList<String>(map.keySet());
-
-                        int qtTotalCharPorLetra = 0;
-
-                        for (String chave : chaves) {
-
-                            qtTotalCharPorLetra += map.get(chave) * chave.length();
-
-                        }
-
-                        int qtTotalCharMelhorCenario;
-                        int qtTotalCharMelhorCenarioAux = 10000;
-
-                        for (String chave : chaves) {
-
-                            qtTotalCharMelhorCenario = (qtTotalCharPorLetra - (map.get(chave) * chave.length())) + (map.get(chave) * 2);
-
-                            if ((qtTotalCharMelhorCenarioAux > qtTotalCharMelhorCenario) && chave.length() > 2) {
-
-                                qtTotalCharMelhorCenarioAux = qtTotalCharMelhorCenario;
-                                dicionario.put(letra, chave);
-
-                            }
-
-                        }
-
-                    });
-
-                    String fraseAbreviada = vetPalavrasFrase
-                            .stream()
-                            .map(palavra -> {
-
-                                String primeiraLetra = palavra.substring(0, 1);
-                                return dicionario.get(primeiraLetra).equals(palavra) ? primeiraLetra + "." : palavra;
-
-                            }).collect(Collectors.joining(" "));
-                    ;
-
-                    System.out.println(fraseAbreviada);
-                    int quantidadeAbreviacoes = 0;
-
-                    for (String letra : alfabeto) {
-
-                        if (!dicionario.get(letra).equals("")) {
-
-                            quantidadeAbreviacoes++;
-
-                        }
-
-                    }
-
-                    System.out.println(quantidadeAbreviacoes);
-
-                    alfabeto.stream().forEach(letra -> {
-
-                        if (!dicionario.get(letra).equals("")) {
-
-                            System.out.println(letra + ". = " + dicionario.get(letra));
-
-                        }
-
-                    });
+                    qtTotalCharPorLetra += map.get(chave) * chave.length();
 
                 }
 
+                int qtTotalCharMelhorCenario;
+                int qtTotalCharMelhorCenarioAux = 10000;
 
-                break;
-            case 2:
-                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-                StringTokenizer st;
-                String linhaAtual = "";
-                List<String> palavras, palavrasLimpas;
-                Integer qtde = 0;
+                for (String chave : chaves) {
 
-                while (!(linhaAtual = br.readLine()).equals(".")) {
-                    st = new StringTokenizer(linhaAtual);
-                    String p = "", frase = "";
-                    palavras = new ArrayList<>();
-                    palavrasLimpas = new ArrayList<>();
-                    qtde = 0;
+                    qtTotalCharMelhorCenario = (qtTotalCharPorLetra - (map.get(chave) * chave.length())) + (map.get(chave) * 2);
 
-                    while (st.hasMoreTokens()) {
-                        p = st.nextToken();
+                    if ((qtTotalCharMelhorCenarioAux > qtTotalCharMelhorCenario) && chave.length() > 2) {
 
-                        if (p.length() > 2) {
-                            if (!palavras.contains(p)) {
-                                palavras.add(p);
-                            }
-                        }
+                        qtTotalCharMelhorCenarioAux = qtTotalCharMelhorCenario;
+                        dicionario.put(letra, chave);
 
-                        frase = frase + p + " ";
                     }
-
-                    boolean maior;
-                    for (String a : palavras) {
-                        maior = true;
-                        for (String b : palavras) {
-                            if (!a.equals(b)) {
-                                if (a.charAt(0) == b.charAt(0)) {
-                                    if (((a.length() - 2) * contaOcorrencias(a, frase)) < ((b.length() - 2) * contaOcorrencias(b, frase))) {
-                                        maior = false;
-
-                                    }
-                                }
-                            }
-                        }
-                        if (maior) {
-                            palavrasLimpas.add(a);
-                        }
-                    }
-
-                    for (String a : frase.split(" ")) {
-                        if (palavrasLimpas.contains(a)) {
-                            qtde++;
-                        }
-                    }
-
-                    Collections.sort(palavrasLimpas, (a, b) -> Integer.compare(b.length(), a.length()));
-
-                    for (String trocaPalavra : palavrasLimpas) {
-                        frase = frase.replaceAll(trocaPalavra + " ", trocaPalavra.charAt(0) + ". ");
-                    }
-
-
-                    System.out.println(frase);
-                    System.out.println(palavrasLimpas.size());
-
-                    Collections.sort(palavrasLimpas);
-                    for (String siglas : palavrasLimpas) {
-                        System.out.println(siglas.charAt(0) + ". = " + siglas);
-                    }
-
 
                 }
-                break;
-        }
-    }
 
-    public static int contaOcorrencias(String palavra, String str) {
+            });
 
-        int count = 0;
-        for (String s : str.split(" ")) {
-            if (s.equals(palavra)) {
-                count++;
+            String fraseAbreviada = vetPalavrasFrase
+                    .stream()
+                    .map(palavra -> {
+
+                        String primeiraLetra = palavra.substring(0, 1);
+                        return dicionario.get(primeiraLetra).equals(palavra) ? primeiraLetra + "." : palavra;
+
+                    }).collect(Collectors.joining(" "));
+            ;
+
+            System.out.println(fraseAbreviada);
+            int quantidadeAbreviacoes = 0;
+
+            for (String letra : alfabeto) {
+
+                if (!dicionario.get(letra).equals("")) {
+
+                    quantidadeAbreviacoes++;
+
+                }
+
             }
+
+            System.out.println(quantidadeAbreviacoes);
+
+            alfabeto.stream().forEach(letra -> {
+
+                if (!dicionario.get(letra).equals("")) {
+
+                    System.out.println(letra + ". = " + dicionario.get(letra));
+
+                }
+
+            });
+
         }
-        return count;
+
+
     }
 
 }

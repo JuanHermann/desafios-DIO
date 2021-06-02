@@ -30,7 +30,7 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
-public class MainJuan {
+public class ProdutoDivisaoJuan {
 
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);

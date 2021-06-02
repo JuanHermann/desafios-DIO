@@ -71,103 +71,25 @@ public class YearEndUniform {
 
     public static void main(String[] args) throws IOException {
 
-//        1 - Projeto Lucas
-//        2 - Projeto Juan
-        int opcao = 2;
-        switch (opcao) {
-            case 1:
-                Scanner scanner = new Scanner(System.in);
-                int N = scanner.nextInt();
-                scanner.nextLine();
-                ArrayList<YearEndUniform> arrayUniforms = new ArrayList<>(N);
-                String name, uniformDetails, uniformColor, uniformSize;
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        scanner.nextLine();
+        ArrayList<YearEndUniform> arrayUniforms = new ArrayList<>(N);
+        String name, uniformDetails, uniformColor, uniformSize;
 
-                for (int i = 0; i < N; i++) {
-                    name = scanner.nextLine();
-                    uniformDetails = scanner.nextLine();
-                    uniformColor = uniformDetails.split(" ")[0];
-                    uniformSize = uniformDetails.split(" ")[1];
-                    arrayUniforms.add(new YearEndUniform(name, uniformColor, uniformSize));
-                }
+        for (int i = 0; i < N; i++) {
+            name = scanner.nextLine();
+            uniformDetails = scanner.nextLine();
+            uniformColor = uniformDetails.split(" ")[0];
+            uniformSize = uniformDetails.split(" ")[1];
+            arrayUniforms.add(new YearEndUniform(name, uniformColor, uniformSize));
+        }
 
-                scanner.close();
-                Collections.sort(arrayUniforms, new UniformComparator());
+        scanner.close();
+        Collections.sort(arrayUniforms, new UniformComparator());
 
-                for (var item : arrayUniforms) {
-                    item.printStudentInfos();
-                }
-                break;
-            case 2:
-                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-                String linhaAtual = "";
-                List<String> encomendas = new ArrayList<>();
-                List<String> encomendasAux = new ArrayList<>();
-                List<String> nomes = new ArrayList<>();
-                String pedido = "";
-
-                while (!(linhaAtual = br.readLine()).equals("0")) {
-
-                    boolean tamanho = false;
-
-                    for (String p : linhaAtual.split(" ")) {
-                        if (p.equals("P") || p.equals("M") || p.equals("G")) {
-                            tamanho = true;
-                        }
-                    }
-
-                    if (tamanho) {
-                        pedido = linhaAtual + " " + pedido;
-
-                        encomendas.add(pedido);
-
-                        pedido = "";
-
-                    } else {
-                        pedido = linhaAtual;
-                    }
-
-
-                }
-
-                encomendas = encomendas.stream().sorted().collect(Collectors.toList());
-                char ant = '\0';
-                char antAux = '\0';
-                for (String a : encomendas) {
-                    char c = a.charAt(0);
-                    if (c != ant) {
-                        ant = c;
-                        for (String b : encomendas) {
-                            if (c == b.charAt(0)) {
-                                encomendasAux.add(b);
-
-                            }
-
-                        }
-
-                        encomendasAux = encomendasAux.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-                        for (String d : encomendasAux) {
-                            char f = d.charAt(d.indexOf(" ") + 1);
-                            if (f != antAux) {
-                                antAux = f;
-                                for (String b : encomendasAux) {
-                                    if (f == b.charAt(d.indexOf(" ") + 1)) {
-                                        nomes.add(b);
-
-                                    }
-
-                                }
-                                nomes.stream().sorted().forEach(System.out::println);
-                                nomes = new ArrayList<>();
-
-                            }
-                        }
-                        antAux = '\0';
-                        encomendasAux = new ArrayList<>();
-
-                    }
-                }
-                break;
+        for (var item : arrayUniforms) {
+            item.printStudentInfos();
         }
 
 

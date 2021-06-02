@@ -13,7 +13,7 @@ Imprima a saída de acordo com o exemplo fornecido abaixo, indicando quantas vez
 
 import java.util.*;
 
-public class MainJuan {
+public class ContagemRepetidaJuan {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

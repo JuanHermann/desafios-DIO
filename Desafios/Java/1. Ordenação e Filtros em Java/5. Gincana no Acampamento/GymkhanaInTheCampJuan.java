@@ -48,67 +48,69 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class GymkhanaInTheCamp {
+public class GymkhanaInTheCampJuan {
 
     public static void main(String[] args) {
 
-        Scanner scr = new Scanner(System.in);
-        List<String> listaAlunos = new ArrayList<>();
+        Scanner leitor = new Scanner(System.in);
 
-        int numeroDeAlunos;
-        String aluno;
-        String valorFicha;
-        int valorAtualFicha;
-        int indiceAtual;
-        int indiceAlunoEliminado;
+        List<String> alunos = new ArrayList();
+        int fila = 0, numero = 0;
 
-        numeroDeAlunos = Integer.parseInt(scr.next());
+        while (leitor.hasNext()) {
 
-        while (numeroDeAlunos > 0) {
+            if (fila == 0) {
 
-            for (int i = 0; i < numeroDeAlunos; i++) {
+                fila = Integer.parseInt(leitor.nextLine());
 
-                aluno = scr.next();
-                valorFicha = scr.next();
-                listaAlunos.add(aluno.trim() + " " + valorFicha.trim());
+                if (fila == 0)
+                    break;
 
-            }
+            } else {
+                alunos.add(leitor.nextLine());
+                if (alunos.size() == fila) {
 
-            indiceAtual = 0;
-            indiceAlunoEliminado = 0;
-            valorAtualFicha = Integer.parseInt(listaAlunos.get(indiceAtual).split(" ")[1]);
+                    numero = Integer.parseInt(alunos.get(0).split(" ")[1]);
+                    int index = 0;
+                    while (alunos.size() > 1) {
 
-            for (int i = 0; i < numeroDeAlunos - 1; i++) {
+                        for (int i = 1; i <= numero; i++) {
 
-                if (valorAtualFicha % 2 == 0) {
+                            if (numero % 2 != 0) {
+                                index++;
+                                if (index == alunos.size()) {
+                                    index = 0;
+                                }
+                            } else {
+                                index--;
+                                if (index < 0) {
+                                    index = alunos.size() - 1;
+                                }
+                            }
 
-                    indiceAlunoEliminado = (listaAlunos.size() - (valorAtualFicha % listaAlunos.size()) + indiceAtual) % listaAlunos.size();
+                        }
 
-                } else if (valorAtualFicha % 2 != 0) {
+                        numero = Integer.parseInt(alunos.get(index).split(" ")[1]);
+                        alunos.remove(index);
 
-                    indiceAlunoEliminado = (valorAtualFicha % listaAlunos.size() + indiceAtual) % listaAlunos.size();
+                        if (numero % 2 != 0) {
+                            index--;
+                        }
+
+                    }
+
+                    System.out.println("Vencedor(a): " + alunos.get(0).split(" ")[0]);
+
+                    alunos = new ArrayList<>();
+                    fila = 0;
+
 
                 }
 
-                valorAtualFicha = Integer.parseInt(listaAlunos.get(indiceAlunoEliminado).split(" ")[1]);
-                listaAlunos.remove(indiceAlunoEliminado);
-
-                indiceAtual = (valorAtualFicha % 2 == 0) ?
-                        ((indiceAlunoEliminado <= listaAlunos.size() - 1) ?
-                                indiceAlunoEliminado : 0) :
-                        ((indiceAlunoEliminado == 0) ?
-                                (listaAlunos.size() - 1) : (indiceAlunoEliminado - 1));
-
             }
 
-            System.out.println("Vencedor(a): " + listaAlunos.get(0).split(" ")[0]);
-
-            listaAlunos.clear();
-            numeroDeAlunos = Integer.parseInt(scr.next());
 
         }
-
-        scr.close();
 
 
     }

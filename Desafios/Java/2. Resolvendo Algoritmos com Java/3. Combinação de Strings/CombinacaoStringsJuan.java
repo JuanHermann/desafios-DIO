@@ -25,43 +25,44 @@
 
 import java.util.Scanner;
 
-public class Main {
+public class CombinacaoStringsJuan {
 
     public static void main(String[] args) {
 
 
-        Scanner scan = new Scanner(System.in);
-        int casos = Integer.parseInt(scan.nextLine());
+        Scanner leitor = new Scanner(System.in);
+        String resultado, s1, s2;
+        int menor;
+        boolean p1, p2;
 
-        for (int i = 1; i <= casos; i++) {
+        int N = leitor.nextInt();
+        for (int i = 0; i < N; i++) {
 
-            StringBuilder analise = new StringBuilder();
-            String[] palavras = scan.nextLine().split(" ");
+            s1 = leitor.next();
+            s2 = leitor.next();
+            resultado = "";
+            p1 = false;
+            p2 = false;
 
-            int maxSize = Math.max(
-                    palavras[0].length(),
-                    palavras[1].length());
-
-            for (int dados = 0; dados < maxSize; dados++) {
-
-                if (dados < palavras[0].length()) {
-
-                    analise.append(palavras[0].charAt(dados));
-
+            if (s1.length() > s2.length()) {
+                menor = s2.length();
+                p1 = true;
+            } else {
+                if (s1.length() != s2.length()) {
+                    p2 = true;
                 }
-
-                if (dados < palavras[1].length()) {
-
-                    analise.append(palavras[1].charAt(dados));
-
-                }
+                menor = s1.length();
+            }
+            for (int j = 0; j < menor; j++) {
+                resultado += "" + s1.charAt(j) + s2.charAt(j);
 
             }
 
-            System.out.println(analise.toString());
+            if (p1) resultado += s1.substring(menor);
+            if (p2) resultado += s2.substring(menor);
 
+            System.out.println(resultado);
         }
-
 
     }
 }
