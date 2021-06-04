@@ -1,7 +1,7 @@
 # Desafios e Soluções da DIO
 Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções para quem possa ter alguma duvida, ter mais de um solução para se basear.
 
-
+Todos os códigos desenvolvido por mim possuem o meu nome (Juan) no final da classe.
 
 
 
@@ -13,7 +13,7 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
         <!-- Ordenação e Filtros em Java -->
         <table border=1>
             <tr>
-                <th colspan="4">Ordenação e Filtros em Java</th>
+                <th colspan="4">1. Ordenação e Filtros em Java</th>
             </tr>
             <tr>
                 <th colspan="4"></th>
@@ -27,38 +27,38 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
             <tr>
                 <td align="center">1</td>
                 <td>Ordenando Números Pares e Ímpares</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/1.%20Ordenando%20N%C3%BAmeros%20Pares%20e%20%C3%8Dmpares/OrderingEvenNumbers.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">2</td>
                 <td>Compras no Supermercado</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/2.%20Compras%20no%20Supermercado/SupermarketShopping.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">3</td>
                 <td>Uniformes de Final de Ano</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/3.%20Uniformes%20de%20Final%20de%20Ano/YearEndUniform.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">4</td>
                 <td>Fila do Banco</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/4.%20Fila%20do%20Banco/BankQueue.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">5</td>
                 <td>Gincana no Acampamento</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/1.%20Ordena%C3%A7%C3%A3o%20e%20Filtros%20em%20Java/5.%20Gincana%20no%20Acampamento/GymkhanaInTheCamp.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
         </table>
         <!-- Resolvendo Algoritmos com Java -->
         <table border=1>
             <tr>
-                <th colspan="4">Resolvendo Algoritmos com Java</th>
+                <th colspan="4">2. Resolvendo Algoritmos com Java</th>
             </tr>
             <tr>
                 <th colspan="4"></th>
@@ -72,38 +72,38 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
             <tr>
                 <td align="center">1</td>
                 <td>Coração das Cartas</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/2.%20Resolvendo%20Algoritmos%20com%20Java/1.%20Cora%C3%A7%C3%A3o%20das%20Cartas/Main.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">2</td>
                 <td>Abreviando Posts do Blog</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/2.%20Resolvendo%20Algoritmos%20com%20Java/2.%20Abreviando%20Posts%20do%20Blog/Main.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">3</td>
                 <td>Combinação de Strings</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/2.%20Resolvendo%20Algoritmos%20com%20Java/3.%20Combina%C3%A7%C3%A3o%20de%20Strings/Main.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">4</td>
                 <td>Hash Mágico</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/2.%20Resolvendo%20Algoritmos%20com%20Java/4.%20Hash%20M%C3%A1gico/Main.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">5</td>
                 <td>O Tabuleiro Secreto</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/2.%20Resolvendo%20Algoritmos%20com%20Java/5.%20O%20Tabuleiro%20Secreto/Main.java">Código</a></td>
+                <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
         </table>
         <!-- Solução de Problemas Básicos em Java -->
         <table border=1>
             <tr>
-                <th colspan="4">Solução de Problemas Básicos em Java</th>
+                <th colspan="4">3. Solução de Problemas Básicos em Java</th>
             </tr>
             <tr>
                 <th colspan="4"></th>
@@ -117,26 +117,71 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
             <tr>
                 <td align="center">1</td>
                 <td>Exibindo Números Pares</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/3.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20B%C3%A1sicos%20em%20Java/1.%20Exibindo%20N%C3%BAmeros%20Pares/solucao.java">Código</a></td>
                 <td align="center">✔️</td>
+                <td align="center"></td>
             </tr>
             <tr>
                 <td align="center">2</td>
                 <td>Idade em Dias</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/3.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20B%C3%A1sicos%20em%20Java/2.%20Idade%20em%20Dias/solucao.java">Código</a></td>
                 <td align="center">✔️</td>
+                <td align="center"></td>
             </tr>
             <tr>
                 <td align="center">3</td>
                 <td>Notas da Prova</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/Java/3.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20B%C3%A1sicos%20em%20Java/3.%20Notas%20da%20Prova/solucao.java">Código</a></td>
+                <td align="center">✔️</td>
+                <td align="center"></td>
+            </tr>
+        </table>      
+                        <!-- 4. Introdução a Busca e Substituição em Java -->
+         <table border=1>
+            <tr>
+                <th colspan="4">4. Introdução a Busca e Substituição em Java</th>
+            </tr>
+            <tr>
+                <th colspan="4"></th>
+            </tr>
+            <tr>
+                <th>Etapa</th>
+                <th>Desafio</th>
+                <th>Lucas</th>
+                <th>Juan</th>
+            </tr>
+            <tr>
+                <td align="center">1</td>
+                <td>Ordenação de palavras por tamanho</td>
+                <td></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">2</td>
+                <td>Encontre a maior substring</td>
+                <td></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td>Validador de senhas com requisitos</td>
+                <td></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">4</td>
+                <td>Pedra, Papel, Tesoura, Lagarto e Spock</td>
+                <td></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">5</td>
+                <td>Atalhos para o Weblogger Brasil</td>
+                <td></td>
                 <td align="center">✔️</td>
             </tr>
         </table>
-                <!-- Solução de Problemas em Java -->
+                  <!-- Solução de Problemas em Java -->
          <table border=1>
             <tr>
-                <th colspan="4">Solução de Problemas com Java</th>
+                <th colspan="4">5. Solução de Problemas com Java</th>
             </tr>
             <tr>
                 <th colspan="4"></th>
@@ -151,43 +196,88 @@ Com base no fork do projeto no lucasmagalhaes, eu adicionei as minha soluções 
                 <td align="center">1</td>
                 <td>Contagem repetida de números</td>
                 <td></td>
-                <td><a href="https://github.com/JuanHermann/desafios-DIO/blob/master/Desafios/Java/5.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20com%20Java/1.%20Contagem%20repetida%20de%20n%C3%BAmeros/MainJuan.Java">Código</a></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">2</td>
                 <td>Vogais Extraterrestres</td>
                 <td></td>
-                <td><a href="https://github.com/JuanHermann/desafios-DIO/blob/master/Desafios/Java/5.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20com%20Java/2.%20Vogais%20Extraterrestres/MainJuan.Java">Código</a></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">3</td>
                 <td>Melhor amigo do Pablo</td>
                 <td></td>
-                <td><a href="https://github.com/JuanHermann/desafios-DIO/blob/master/Desafios/Java/5.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20com%20Java/3.%20Melhor%20amigo%20do%20Pablo/MainJuan.Java">Código</a></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">4</td>
                 <td>Entrevista embaraçosa</td>
                 <td></td>
-                <td><a href="https://github.com/JuanHermann/desafios-DIO/blob/master/Desafios/Java/5.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20com%20Java/4.%20Entrevista%20embara%C3%A7osa/MainJuan.java">Código</a></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">5</td>
                 <td>Conjuntos bons ou ruins</td>
                 <td></td>
-                <td><a href="https://github.com/JuanHermann/desafios-DIO/blob/master/Desafios/Java/5.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20com%20Java/5.%20Conjuntos%20bons%20ou%20ruins/MainJuan.java">Código</a></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">6</td>
                 <td>Produto e divisão</td>
                 <td></td>
-                <td><a href="https://github.com/JuanHermann/desafios-DIO/tree/master/Desafios/Java/5.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20com%20Java/6.%20Produto%20e%20divis%C3%A3o">Código</a></td>
+                <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">7</td>
                 <td>Barras de ouro</td>
                 <td></td>
-                <td><a href="https://github.com/JuanHermann/desafios-DIO/tree/master/Desafios/Java/5.%20Solu%C3%A7%C3%A3o%20de%20Problemas%20com%20Java/7.%20Barras%20de%20ouro">Código</a></td>
+                <td align="center">✔️</td>
+            </tr>
+        </table>
+                          <!-- Solução de Problemas em Java -->
+         <table border=1>
+            <tr>
+                <th colspan="4">6. Fundamentos Aritméticos em Java</th>
+            </tr>
+            <tr>
+                <th colspan="4"></th>
+            </tr>
+            <tr>
+                <th>Etapa</th>
+                <th>Desafio</th>
+                <th>Lucas</th>
+                <th>Juan</th>
+            </tr>
+            <tr>
+                <td align="center">1</td>
+                <td>Quantidade de Números Positivos</td>
+                <td></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">2</td>
+                <td>Exibindo Números Pares</td>
+                <td></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td>Análise de Números</td>
+                <td></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">4</td>
+                <td>Contagem de Cédulas</td>
+                <td></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">5</td>
+                <td>Consumo Médio do Automóvel</td>
+                <td></td>
+                <td align="center">✔️</td>
             </tr>
         </table>
     </div>
