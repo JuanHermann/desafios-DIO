@@ -581,19 +581,19 @@ Todos os códigos desenvolvido por mim possuem o meu nome (Juan) no final da cla
             </tr>
             <tr>
                 <td align="center">1</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/C%20Sharp/8.%20Praticando%20Programa%C3%A7%C3%A3o%20em%20C%23/1.%20Coordenadas%20de%20um%20Ponto/README.md">Coordenadas de um Ponto</a></td>
+                <td><a href="https://github.com/JuanHermann/desafios-DIO/blob/master/Desafios/C%20Sharp/8.%20Praticando%20Programa%C3%A7%C3%A3o%20em%20C%23/1.%20Coordenadas%20de%20um%20Ponto/README.md">Coordenadas de um Ponto</a></td>
                 <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">2</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/C%20Sharp/8.%20Praticando%20Programa%C3%A7%C3%A3o%20em%20C%23/2.%20Compras%20no%20Supermercado/README.md">Compras no Supermercado</a></td>
+                <td><a href="https://github.com/JuanHermann/desafios-DIO/blob/master/Desafios/C%20Sharp/8.%20Praticando%20Programa%C3%A7%C3%A3o%20em%20C%23/2.%20Compras%20no%20Supermercado/README.md">Compras no Supermercado</a></td>
                 <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
             <tr>
                 <td align="center">3</td>
-                <td><a href="https://github.com/lucasrmagalhaes/desafios-DIO/blob/master/Desafios/C%20Sharp/8.%20Praticando%20Programa%C3%A7%C3%A3o%20em%20C%23/3.%20Pink%20e%20C%C3%A9rebro/README.md">Pink e Cérebro</a></td>
+                <td><a href="https://github.com/JuanHermann/desafios-DIO/blob/master/Desafios/C%20Sharp/8.%20Praticando%20Programa%C3%A7%C3%A3o%20em%20C%23/3.%20Pink%20e%20C%C3%A9rebro/README.md">Pink e Cérebro</a></td>
                 <td align="center">✔️</td>
                 <td align="center">✔️</td>
             </tr>
