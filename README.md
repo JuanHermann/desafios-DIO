@@ -473,18 +473,24 @@ Todos os códigos desenvolvido por mim possuem o meu nome (Juan) no final da cla
                 <td align="center">1</td>
                 <td>Consumo Médio do Automóvel</td>
                 <td align="center">✔️</td>
-                <td align="center">✔️</td>
+                <td align="center"></td>
             </tr>
             <tr>
                 <td align="center">2</td>
                 <td>DDD</td>
                 <td align="center">✔️</td>
+                <td align="center"></td>
+            </tr>
+            <tr>
+                <td align="center">3.2</td>
+                <td>Aumento de Salário</td>
                 <td align="center">✔️</td>
+                <td align="center"></td>
             </tr>
             <tr>
                 <td align="center">3</td>
-                <td>Aumento de Salário</td>
-                <td align="center">✔️</td>
+                <td>Notas e Moedas</td>
+                <td align="center"></td>
                 <td align="center">✔️</td>
             </tr>
         </table>
@@ -598,6 +604,50 @@ Todos os códigos desenvolvido por mim possuem o meu nome (Juan) no final da cla
                 <td align="center">✔️</td>
             </tr>
         </table>
-        <!-- Praticando Programação em C# -->
+        <!-- 9. Solucionando desafios intermediários em C# -->
+        <table border=1>
+            <tr>
+                <th colspan="4">9. Solucionando desafios intermediários em C#</th>
+            </tr>
+            <tr>
+                <th colspan="4"></th>
+            </tr>
+            <tr>
+                <th>Etapa</th>
+                <th>Desafio</th>
+                <th>Lucas</th>
+                <th>Juan</th>
+            </tr>
+            <tr>
+                <td align="center">1</td>
+                <td>Teste de Seleção 1</td>
+                <td align="center"></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">2</td>
+                <td>Triangulo</td>
+                <td align="center"></td>
+                <td align="center">✔️</td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td>Notas e Moedas</td>
+                <td align="center"></td>
+                <td align="center">✔️</td>
+             </tr>
+            <tr>
+                <td align="center">4</td>
+                <td>Teorema da Divisão Euclidiana</td>
+                <td align="center"></td>
+                <td align="center">✔️</td>
+             </tr>
+            <tr>
+                <td align="center">5</td>
+                <td>Fórmula de Bhaskara</td>
+                <td align="center"></td>
+                <td align="center">✔️</td>
+             </tr>
+        </table>
     </div>
 </details>
